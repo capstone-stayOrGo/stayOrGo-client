@@ -1,6 +1,6 @@
-<p align="center">
- <img src="https://user-images.githubusercontent.com/102887963/195507975-9183f3b4-2c01-4996-9a32-a115c045bf67.png" alt="wooden GTFO sign"/>
-</p>
+<h1 align="center">
+Stay Or Go 🚩
+</h1>
 
 ## 🔥 🌪 🌦 Table of Contents 🌨 🌀 🔥
 - [Introduction](#introduction)
