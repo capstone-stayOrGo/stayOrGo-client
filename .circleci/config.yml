@@ -2,7 +2,7 @@ version: 2.1
 
 orbs:
   node: circleci/node@4.7
-  heroku: circleci/heroku@1.2.6 # Use the Heroku orb in your config
+  heroku: circleci/heroku@2.0.0 # Use the Heroku orb in your config
 
 jobs:
   build_and_test:
@@ -13,7 +13,7 @@ jobs:
           pkg-manager: npm
       - run:
           name: Run tests
-          command: npm run cypress
+          command: npm run test
       - run : 
           name : Run build
           command: npm run build
