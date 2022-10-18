@@ -12,14 +12,16 @@ main {
   margin: 1.5vh 1.5vw;
 }
 
-.map-alert {
+.sms-search-weather {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  margin-left: 1vw;
+  margin-right: 1vw;
 }
 
-.sms-search-weather {
+.map-alert {
   display: flex;
   flex-direction: column;
   align-items: center;

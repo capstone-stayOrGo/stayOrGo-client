@@ -7,6 +7,9 @@ import Map from '../Map/Map';
 import NavBar from "../NavBar/NavBar";
 import WeatherAlert from "../WeatherAlert/WeatherAlert";
 import SMSNotification from "../SMSNotification/SMSNotification";
+import Search from "../Search/Search";
+import Weather from "../Weather/Weather";
+import Forecast from "../Forecast/Forecast";
 import './App.css';
 
 function App() {
@@ -31,6 +34,9 @@ function App() {
         <NavBar />
         <div className="sms-search-weather">
           <SMSNotification />
+          <Search />
+          <Weather />
+          <Forecast />
         </div>
         <div className="map-alert">
           {location ? <Map location={location} /> : <h2>Loading...</h2>}
