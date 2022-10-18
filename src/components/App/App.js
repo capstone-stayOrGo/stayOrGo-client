@@ -5,6 +5,7 @@ import React, { useState, useEffect } from "react"
 import Footer from '../Footer/Footer';
 import Map from '../Map/Map';
 import NavBar from "../NavBar/NavBar";
+import WeatherAlert from "../WeatherAlert/WeatherAlert";
 import './App.css';
 
 function App() {
@@ -26,8 +27,10 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      <h1 className="title">Stay or Go</h1>
-      {location ? <Map location={location} /> : <h2>Loading...</h2>}
+      <div className="map-alert">
+        {location ? <Map location={location} /> : <h2>Loading...</h2>}
+        <WeatherAlert />
+      </div>
       <Footer />
     </div>
   );

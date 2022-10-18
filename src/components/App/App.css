@@ -1,5 +1,15 @@
 .App {
+  display: flex;
   text-align: center;
   margin: 0;
-  height: 100;
+  height: 96vh;
+  width: 100vw;
+}
+
+.map-alert {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 }
