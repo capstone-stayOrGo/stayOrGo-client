@@ -6,6 +6,7 @@ import Footer from '../Footer/Footer';
 import Map from '../Map/Map';
 import NavBar from "../NavBar/NavBar";
 import WeatherAlert from "../WeatherAlert/WeatherAlert";
+import SMSNotification from "../SMSNotification/SMSNotification";
 import './App.css';
 
 function App() {
@@ -26,11 +27,16 @@ function App() {
 
   return (
     <div className="App">
-      <NavBar />
-      <div className="map-alert">
-        {location ? <Map location={location} /> : <h2>Loading...</h2>}
-        <WeatherAlert />
-      </div>
+      <main>
+        <NavBar />
+        <div className="sms-search-weather">
+          <SMSNotification />
+        </div>
+        <div className="map-alert">
+          {location ? <Map location={location} /> : <h2>Loading...</h2>}
+          <WeatherAlert />
+        </div>
+      </main>
       <Footer />
     </div>
   );
