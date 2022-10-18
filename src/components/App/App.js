@@ -8,24 +8,24 @@ import './App.css';
 
 function App() {
 
-  const [location, setLocation] = useState(undefined)
+  const [location, setLocation] = useState(null)
 
   useEffect( () => {
     navigator.geolocation.getCurrentPosition( (geoposition) => {
       const {latitude, longitude} = geoposition.coords
-      setLocation({lat: latitude, long: longitude})
+      setLocation({lat: latitude, lng: longitude})
     })
   }, [])
 
   useEffect(()=> {
-    console.log(location)
+    // Runs whenever the location changes
+    // console.log(location)
   }, [location])
 
   return (
     <div className="App">
       <h1>Stay or Go</h1>
-      <div id="map"></div>
-      <Map />
+      {location ? <Map location={location} /> : <h2>Loading...</h2>}
       <Footer />
     </div>
   );
