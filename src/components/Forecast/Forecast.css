@@ -2,23 +2,25 @@
     background-color: white;
     border-radius: 16px;
     width: 45vw;
-    height: 30vh;
-    padding-top: .5em;
+    height: 32vh;
+    padding-top: 1.2em;
     background-color: #75757A;
     box-shadow: inset 0px 0px 28px 12px #999999;
-    text-shadow: 0px 4px 4px rgba(255, 255, 255, 0.25)
+    text-shadow: 0px 4px 4px rgba(255, 255, 255, 0.25);
+    overflow: scroll;
 }
 
-.title {
+.forecast {
     font-size: 23px;
     font-weight: 700;
+    /* margin-top: 3em; */
 }
 
 .daily-item {
     background: #ffffff;
     border-radius: 12px;
     height: 2.1vh;
-    margin-top: .4em;
+    margin-top: .5em;
     margin-right: 3em;
     margin-left: 3em;
     display: flex;

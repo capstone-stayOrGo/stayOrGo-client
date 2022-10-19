@@ -1,10 +1,11 @@
 .current-weather-container {
         border-radius: 18px;
         width: 45vw;
-        height: 32vh;
+        height: 35vh;
         background-color: #75757A;
         box-shadow: inset 0px 0px 28px 12px #999999;
-        text-shadow: 0px 4px 4px rgba(255, 255, 255, 0.25)
+        text-shadow: 0px 4px 4px rgba(255, 255, 255, 0.25);
+        overflow: scroll;
 }
 
 .location {
@@ -12,7 +13,7 @@
         align-items: center;
         justify-content: center;
         letter-spacing: .25vw;
-        margin-top: 1.6vh;
+        margin-top: 2vh;
 }
 
 .location-pin {
@@ -29,16 +30,14 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
-        margin-top: -.5em;
+        align-content: center;
         margin-bottom: 2em;
-        /* padding: 0; */
 }
 
 .temperature {
         display: flex;
         font-weight: 500;
-        font-size: 5vw;
-        margin-left: 4vw;
+        font-size: 5.3vw;
 }
 
 .weather-icon {
@@ -49,9 +48,15 @@
 
 .divider {
         border: #8e8e8e solid thin;
+        margin-top: 2em;
 }
 
 .details {
-        padding-left: 4em;
-        text-align: left;
+        display: flex;
+        /* flex-direction: row; */
+        align-items: center;
+        margin-top: .5em;
+        padding-left: 2em;
+        font-size: larger;
+        /* text-align: left; */
 }

@@ -29,9 +29,10 @@ const Search = ({ onSearchChange }) => {
         onSearchChange(searchData);
     }
 
+
     return (
         <section className='search-container'>
-            <p>This is where the search form will go</p>
+            {/* <p>Search Other Location</p> */}
             <AsyncPaginate
             placeholder="Search for city"
             debounceTimeout={600}
