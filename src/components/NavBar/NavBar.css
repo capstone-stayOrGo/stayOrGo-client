@@ -1,6 +1,12 @@
 .navbar {
-    height: 100%;
-    width: 7%;
+    display: flex;
+    height: 97.2%;
+    width: 3em;
+    /* width: 9%; */
     background-color: white;
     border-radius: 16px;
+    padding: 1em;
+    background-color: #75757A;
+    box-shadow: inset 0px 0px 28px 12px #999999;
+    text-shadow: 0px 4px 4px rgba(255, 255, 255, 0.25)
 }

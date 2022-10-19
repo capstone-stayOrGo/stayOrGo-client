@@ -4,13 +4,19 @@
   margin: 0;
   height: 96vh;
   width: 100vw;
+  /* padding: 1em; */
 }
 
 main {
   display: flex;
   width: 100%;
   margin: 1.5vh 1.5vw;
+  padding: 1em;
 }
+
+/* .navbar {
+  padding: 1em;
+} */
 
 .sms-search-weather {
   display: flex;
@@ -19,6 +25,8 @@ main {
   justify-content: space-between;
   margin-left: 1vw;
   margin-right: 1vw;
+  padding-right: 1em;
+  padding-left: 1em;
 }
 
 .map-alert {
