@@ -5,7 +5,7 @@ import DisasterAlert from '../DisasterAlert/DisasterAlert'
 const WeatherAlert = ({ disasterAlert }) => {
     //conditional if type==="disaster"
     const alerts = disasterAlert.data.map((alert) => {
-        const { key, id, type, attributes } = alert
+        const { id, type, attributes } = alert
         return <DisasterAlert 
             key={id}
             id={id}

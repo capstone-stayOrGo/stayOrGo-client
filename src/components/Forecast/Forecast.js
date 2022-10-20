@@ -28,20 +28,6 @@ const Forecast = ({ data }) => {
                                 </div>
                             </AccordionItemButton>
                         </AccordionItemHeading>
-                        <AccordionItemPanel>
-                            <div className="daily-details-grid">
-                                <div className='detail-column'>
-                                    <p>Pressure:  {item.main.pressure} in</p>
-                                    <p>Humidity:  {item.main.humidity}%</p>
-                                    <p>Clouds:  {item.clouds.all}</p>
-                                </div>
-                                <div className='detail-column'>
-                                    <p>Wind Speed:  {Math.round(item.wind.speed)} mph</p>
-                                    <p>Sea Level:  {item.main.sea_level} ft</p>
-                                    <p>Feels like:  {Math.round(item.main.feels_like)}°F</p>
-                                </div>
-                            </div>
-                        </AccordionItemPanel>
                     </AccordionItem>
                 ))}
             </Accordion>
@@ -50,3 +36,21 @@ const Forecast = ({ data }) => {
 }
 
 export default Forecast
+
+
+
+
+{/* <AccordionItemPanel>
+    <div className="daily-details-grid">
+        <div className='detail-column'>
+            <p>Pressure:  {item.main.pressure} in</p>
+            <p>Humidity:  {item.main.humidity}%</p>
+            <p>Clouds:  {item.clouds.all}</p>
+        </div>
+        <div className='detail-column'>
+            <p>Wind Speed:  {Math.round(item.wind.speed)} mph</p>
+            <p>Sea Level:  {item.main.sea_level} ft</p>
+            <p>Feels like:  {Math.round(item.main.feels_like)}°F</p>
+        </div>
+    </div>
+</AccordionItemPanel> */}

@@ -8,13 +8,15 @@ const SMSNotification = () => {
 
     return (
         <section className='sms-notify'>
-            <p>SMS Notification sign up</p>
-            <PhoneInput
-                country={'us'}
-                value={phoneNumber}
-                // onChange={phoneNumber => setPhoneNumber({ phoneNumber })}
-            />
-            <button>Submit</button>
+            <p>Enter your phone number below to receive SMS notifications of new alerts</p>
+            <div className='phone-input'>
+                <PhoneInput
+                    country={'us'}
+                    value={phoneNumber}
+                    // onChange={phoneNumber => setPhoneNumber({ phoneNumber })}
+                />
+                <button className='submit-btn' role="button">Submit</button>
+            </div>
         </section>
     )
 }
