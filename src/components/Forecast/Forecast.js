@@ -1,5 +1,6 @@
 import React from 'react'
 import { Accordion, AccordionItem, AccordionItemButton, AccordionItemHeading, AccordionItemPanel } from "react-accessible-accordion"
+import calendar from '../../assets/calendar.png'
 import './Forecast.css'
 
 const WEEK_DAYS = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday','Saturday', 'Sunday']
@@ -10,7 +11,10 @@ const Forecast = ({ data }) => {
 
     return (
         <section className='forecast-container'>
-            <label className="forecast">7 Day Forecast</label>
+            <div className='title-bar'>
+                <img className='nav-icon' alt='calendar icon' src={calendar} />
+                <label className="forecast">7 Day Forecast</label>
+            </div>
             <Accordion allowZeroExpanded>
                 {data.list.slice(0, 7).map((item, idx) => (
                     <AccordionItem key={idx}>
@@ -27,32 +31,14 @@ const Forecast = ({ data }) => {
                         <AccordionItemPanel>
                             <div className="daily-details-grid">
                                 <div className='detail-column'>
-                                    <div className="daily-details-grid-item">
-                                        <label>Pressure:</label>
-                                        <label>{item.main.pressure} hPa</label>
-                                    </div>
-                                    <div className="daily-details-grid-item">
-                                        <label>Humidity:</label>
-                                        <label>{item.main.humidity}%</label>
-                                    </div>
-                                    <div className="daily-details-grid-item">
-                                        <label>Clouds:</label>
-                                        <label>{item.clouds.all}</label>
-                                    </div>
+                                    <p>Pressure:  {item.main.pressure} in</p>
+                                    <p>Humidity:  {item.main.humidity}%</p>
+                                    <p>Clouds:  {item.clouds.all}</p>
                                 </div>
                                 <div className='detail-column'>
-                                    <div className="daily-details-grid-item">
-                                        <label>Wind Speed:</label>
-                                        <label>{item.wind.speed} m/s</label>
-                                    </div>
-                                    <div className="daily-details-grid-item">
-                                        <label>Sea Level:</label>
-                                        <label>{item.main.sea_level}m</label>
-                                    </div>
-                                    <div className="daily-details-grid-item">
-                                        <label>Feels like: </label>
-                                        <label>{Math.round(item.main.feels_like)}°F</label>
-                                    </div>
+                                    <p>Wind Speed:  {Math.round(item.wind.speed)} mph</p>
+                                    <p>Sea Level:  {item.main.sea_level} ft</p>
+                                    <p>Feels like:  {Math.round(item.main.feels_like)}°F</p>
                                 </div>
                             </div>
                         </AccordionItemPanel>

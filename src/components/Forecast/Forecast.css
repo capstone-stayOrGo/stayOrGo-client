@@ -2,7 +2,7 @@
     background-color: white;
     border-radius: 16px;
     width: 45vw;
-    height: 32vh;
+    height: 34vh;
     padding-top: 1.2em;
     background-color: #75757A;
     box-shadow: inset 0px 0px 28px 12px #999999;
@@ -10,10 +10,18 @@
     overflow: scroll;
 }
 
+.title-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 45%;
+    margin-left: 25%;
+    
+}
+
 .forecast {
     font-size: 23px;
     font-weight: 700;
-    /* margin-top: 3em; */
 }
 
 .daily-item {
@@ -57,6 +65,7 @@
 
 .daily-details-grid {
     display: flex;
+    height: 4vh;
     margin-right: 4em;
     margin-left: 4em;
     padding: .5em;
@@ -66,26 +75,11 @@
     box-shadow: 6px 8px 16px 2px rgb(0 0 0 / 30%);
 }
 
-.daily-details-grid-item {
-    display: flex;
-    align-items: center;
-    height: 2vh;
-    font-size: smaller;
-    align-content: left;
-    padding-left: 5em;
-    padding-right: 5em;
-}
-
 .detail-column {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    font-size: smaller;
+    padding-left: 5em;
+    padding-right: 5em;
 }
-
-/* daily-details-grid-item label:first-child {
-    color: #757575;
-}
-
-daily-details-grid-item label:last-child {
-    color: #212121;
-} */
