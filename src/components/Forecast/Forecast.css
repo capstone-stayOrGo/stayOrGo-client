@@ -2,7 +2,7 @@
     background-color: white;
     border-radius: 16px;
     width: 45vw;
-    height: 34vh;
+    height: 35vh;
     padding-top: 1.2em;
     background-color: #75757A;
     box-shadow: inset 0px 0px 28px 12px #999999;
@@ -61,7 +61,6 @@
 
 .description {
     flex: 1 1;
-    margin-right: 15px;
     text-align: right;
 }
 
