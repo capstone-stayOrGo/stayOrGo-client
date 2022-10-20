@@ -12,7 +12,9 @@ const NavBar = () => {
         <nav className='navbar'>
             <h1>Stay or Go</h1>
             <div className='nav-icons-container'>
-                <img className="nav-icon" alt="notification bell" src={bell} />
+                <a href="https://www.weather.gov/" target="_blank" rel="noreferrer">
+                    <img className="nav-icon" alt="notification bell" src={bell} />
+                </a>
                 <img className='nav-icon component-icon' alt="components icon" src={component} />
                 <img className='nav-icon' alt='map icon' src={map} />
                 <img className='nav-icon' alt='pin icon' src={pin} />

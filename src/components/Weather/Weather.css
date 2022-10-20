@@ -41,7 +41,7 @@
 }
 
 .weather-icon {
-        width: 10vw;
+        width: 8vw;
         margin-top: -2vh;
         filter: drop-shadow(5px 20px 6px #222)
 }
