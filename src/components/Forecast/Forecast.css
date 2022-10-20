@@ -66,8 +66,8 @@
 .daily-details-grid {
     display: flex;
     height: 4vh;
-    margin-right: 4em;
-    margin-left: 4em;
+    margin-right: 3em;
+    margin-left: 3em;
     padding: .5em;
     justify-content: center;
     background-color: #e2e2e3cf;
