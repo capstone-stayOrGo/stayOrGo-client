@@ -58,13 +58,13 @@ function App() {
         <NavBar className='navbar'/>
         <div className="sms-search-weather">
           <SMSNotification />
-          <Search onSearchChange={handleOnSearchChange}/>
           <WeatherAlert disasterAlert={disasterAlerts}/>
+          <Search onSearchChange={handleOnSearchChange}/>
           {currentWeather && location ? <Weather data={currentWeather} location={location} /> : <h2>Loading...</h2>}
-          {forecast && <Forecast data={forecast} />}
         </div>
         <div className="map-alert">
           {location ? <Map location={location} /> : <h2>Loading...</h2>}
+          {forecast && <Forecast data={forecast} />}
         </div>
       </main>
       <Footer />
