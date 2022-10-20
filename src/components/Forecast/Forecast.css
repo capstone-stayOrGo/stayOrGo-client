@@ -29,21 +29,27 @@
     flex-direction: column;
 }
 
-.daily-item {
+.daily-forecast {
+    display: flex;
+    justify-content: space-around;
 
+}
+
+.daily-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* align-content: center; */
     background: #ffffff;
     border-radius: 12px;
     height: 2.1vh;
-    margin-top: .5em;
-    margin-right: 3em;
-    margin-left: 3em;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
+    width: 4.5vw;
+    padding: .6em;
+    margin: .5em;
     font-size: 14px;
-    padding: .4em 4em;
+    cursor: pointer;
     box-shadow: 2px 4px 10px .5px rgb(0 0 0 / 30%), 
-                inset 0px 0px 18px 2px rgba(75, 75, 75, 0.724);
+    inset 0px 0px 18px 2px rgba(75, 75, 75, 0.724);
 }
 
 .icon-small {

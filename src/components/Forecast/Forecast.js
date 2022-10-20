@@ -15,22 +15,16 @@ const Forecast = ({ data }) => {
                 <img className='nav-icon' alt='calendar icon' src={calendar} />
                 <label className="forecast">7 Day Forecast</label>
             </div>
-            <Accordion allowZeroExpanded>
+            <article className='daily-forecast'>
                 {data.list.slice(0, 7).map((item, idx) => (
-                    <AccordionItem key={idx}>
-                        <AccordionItemHeading>
-                            <AccordionItemButton className='accordion-button'>
-                                <div className="daily-item">
-                                    <label className="day">{forecastDays[idx]}</label>
-                                    <img alt="weather" className="icon-small" src={ `icons/${item.weather[0].icon}.png`} />
-                                    <label className="description">{item.weather[0].description}</label>
-                                    <label className="min-max">{Math.round(item.main.temp_min)}°F / {Math.round(item.main.temp_max)}°C</label>
-                                </div>
-                            </AccordionItemButton>
-                        </AccordionItemHeading>
-                    </AccordionItem>
+                    <div className="daily-item">
+                        <p className="day">{forecastDays[idx]}</p>
+                        {/* <img alt="weather" className="icon-small" src={ `icons/${item.weather[0].icon}.png`} />
+                        <label className="description">{item.weather[0].description}</label>
+                        <label className="min-max">{Math.round(item.main.temp_min)}°F / {Math.round(item.main.temp_max)}°C</label> */}
+                    </div>
                 ))}
-            </Accordion>
+            </article>
         </section>
     )
 }
@@ -39,6 +33,14 @@ export default Forecast
 
 
 
+{/* <Accordion allowZeroExpanded> */}
+        {/* <AccordionItem key={idx}>
+            <AccordionItemHeading>
+                <AccordionItemButton className='accordion-button'> */}
+                {/* </AccordionItemButton>
+            </AccordionItemHeading>
+        </AccordionItem> */}
+{/* </Accordion> */}
 
 {/* <AccordionItemPanel>
     <div className="daily-details-grid">
