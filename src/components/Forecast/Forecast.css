@@ -24,7 +24,13 @@
     font-weight: 700;
 }
 
+.accordion-button {
+    display: flex;
+    flex-direction: column;
+}
+
 .daily-item {
+
     background: #ffffff;
     border-radius: 12px;
     height: 2.1vh;
