@@ -15,42 +15,47 @@ import './App.css';
 
 function App() {
 
-  const [location, setLocation] = useState(null)
-  const [currentWeather, setCurrentWeather] = useState(null)
-  const [forecast, setForecast] = useState(null)
-  const [disasterAlerts, setDisasterAlerts] = useState(null)
-
-  const handleOnSearchChange = (searchData) => {
-    console.log("searchData: ", searchData)
-    const [lat, lon] = searchData.value.split(" ")
-    
-    const currentWeatherFetch = fetch(`${WEATHER_API_URL}/weather?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=imperial`)
-    const forecastFetch = fetch(`${WEATHER_API_URL}/forecast?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=imperial`)
-    const disasterFetch = fetch(`${DISASTER_API_URL}`)
-
-    Promise.all([currentWeatherFetch, forecastFetch, disasterFetch ])
-    .then(async (response) => {
-      const weatherResponse = await response[0].json();
-      const forecastResponse = await response[1].json();
-      const disasterResponse = await response[2].json();
-
-      setCurrentWeather({ city: searchData.label , ...weatherResponse });
-      setForecast({ city: searchData.label , ...forecastResponse });
-      setDisasterAlerts({ data: searchData , ...disasterResponse })
-    })
-    .catch((err) => console.log(err))
-  }
-
-  console.log("currentWeather: ", currentWeather)
-  console.log("forecast: ", forecast)
-  console.log("disasterAlerts: ", disasterAlerts)
+  const [location, setLocation] = useState("")
+  const [currentWeather, setCurrentWeather] = useState("")
+  const [forecast, setForecast] = useState("")
+  const [disasterAlerts, setDisasterAlerts] = useState("")
 
   useEffect( () => {
     navigator.geolocation.getCurrentPosition( (geoposition) => {
       const {latitude, longitude} = geoposition.coords
       setLocation({lat: latitude, lng: longitude})
     })
+      fetchDisasterData()
+      .then((data) => setDisasterAlerts(data.data))
   }, [])
+
+  const fetchDisasterData = async () => {
+    const response = await fetch("https://dc6e72c4-8622-4280-9089-79102851df02.mock.pstmn.io/api/v1/disasters?lat=33.2896&long=-97.6982");
+    return await response.json();
+  }
+  
+  // const findDisaster = () => {
+  //   return fetch(`${DISASTER_API_URL}`)
+  //   .then(response => response.json())
+
+  //   // Promise.all([disasterFetch])
+  //   //   .then(response => response.json())
+  //   //   .then(data => {
+  //   //     setDisasterAlerts(data)
+  //   //   })
+
+  // }
+  console.log('location: ', location) //location: {lat: 32.9956027, lng: -97.3765712}
+  console.log("currentWeather: ", currentWeather)
+  console.log("forecast: ", forecast)
+  console.log("disasterAlerts: ", disasterAlerts)
+
+  // useEffect( () => {
+  //   navigator.geolocation.getCurrentPosition( (geoposition) => {
+  //     const {latitude, longitude} = geoposition.coords
+  //     setLocation({lat: latitude, lng: longitude})
+  //   })
+  // }, [])
 
   return (
     <div className="App">
@@ -59,7 +64,7 @@ function App() {
         <div className="sms-search-weather">
           <SMSNotification />
           <WeatherAlert disasterAlert={disasterAlerts}/>
-          <Search onSearchChange={handleOnSearchChange}/>
+          {/* <Search onSearchChange={handleOnSearchChange}/> */}
           {currentWeather && location ? <Weather data={currentWeather} location={location} /> : <h2>Loading...</h2>}
         </div>
         <div className="map-alert">
@@ -73,3 +78,49 @@ function App() {
 }
 
 export default App;
+
+
+
+
+
+// const onLoad = (location) => {
+  // const [lat, lon] = location.split(" ")
+  // const currentWeatherFetch = fetch(`${WEATHER_API_URL}/weather?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=imperial`)
+  // const forecastFetch = fetch(`${WEATHER_API_URL}/forecast?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=imperial`)
+  // const disasterFetch = fetch(`${DISASTER_API_URL}`)
+  // //  
+  // Promise.all([ currentWeatherFetch, forecastFetch, disasterFetch ])
+  // .then(async (response) => {
+  //   const weatherResponse = await response[0].json();
+  //   const forecastResponse = await response[1].json();
+  //   const disasterResponse = await response[2].json();
+  
+  //   setCurrentWeather({ ...weatherResponse });
+  //   setForecast({ ...forecastResponse });
+  //   setDisasterAlerts({ data: location , ...disasterResponse })
+  // })
+  // .catch((err) => console.log(err))
+// }
+
+
+
+  // const handleOnSearchChange = (searchData) => {
+  //   // console.log("searchData: ", searchData) //searchData: {value: '42.558333333 1.555277777', label: 'Andorra, AD'} from search function
+  //   // const [lat, lon] = searchData.value.split(" ")
+    
+  //   // const currentWeatherFetch = fetch(`${WEATHER_API_URL}/weather?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=imperial`)
+  //   // const forecastFetch = fetch(`${WEATHER_API_URL}/forecast?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=imperial`)
+  //   // const disasterFetch = fetch(`${DISASTER_API_URL}`)
+
+  //   // Promise.all([currentWeatherFetch, forecastFetch, disasterFetch ])
+  //   // .then(async (response) => {
+  //   //   const weatherResponse = await response[0].json();
+  //   //   const forecastResponse = await response[1].json();
+  //   //   const disasterResponse = await response[2].json();
+
+  //   //   setCurrentWeather({ city: searchData.label , ...weatherResponse });
+  //   //   setForecast({ city: searchData.label , ...forecastResponse });
+  //   //   setDisasterAlerts({ data: searchData , ...disasterResponse })
+  //   // })
+  //   // .catch((err) => console.log(err))
+  // }

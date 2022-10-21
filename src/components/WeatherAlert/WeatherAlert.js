@@ -3,20 +3,31 @@ import './WeatherAlert.css'
 import DisasterAlert from '../DisasterAlert/DisasterAlert'
 
 const WeatherAlert = ({ disasterAlert }) => {
-    //conditional if type==="disaster"
-    const alerts = disasterAlert.data.map((alert) => {
-        const { id, type, attributes } = alert
-        return <DisasterAlert 
-            key={id}
-            id={id}
+    // conditional if type==="disaster"
+    const fullAlert = Object.keys(disasterAlert)
+    const alertDetails = fullAlert.map(eachAlert => {
+        return disasterAlert[eachAlert].attributes
+    })
+    console.log('alertDetails: ', alertDetails)
+    const formattedAlert = alertDetails.map(eachFormattedAlert => {
+        const { areas, description, headline, severity, type, urgency } = eachFormattedAlert
+        return (
+        
+        <DisasterAlert 
+            key={Date.now()}
+            areas={areas}
             type={type}
-            attributes={attributes}
+            description={description}
+            headline={headline}
+            severity={severity}
+            urgency={urgency}
         />
+        )
     })
     return (
         <section className='weather-alert'>
             <h1 className='disaster-title'>Disaster Alerts</h1>
-            { alerts.length ? alerts : <h2>No disaster alerts at this time!</h2>}
+            { formattedAlert.length ? formattedAlert : <h2>No disaster alerts at this time!</h2>}
         </section>
     )
 }
