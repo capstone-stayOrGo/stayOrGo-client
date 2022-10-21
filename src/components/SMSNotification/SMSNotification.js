@@ -15,7 +15,7 @@ const SMSNotification = () => {
                     value={phoneNumber}
                     // onChange={phoneNumber => setPhoneNumber({ phoneNumber })}
                 />
-                <button className='submit-btn' role="button">Submit</button>
+                <button className='submit-btn'>Submit</button>
             </div>
         </section>
     )

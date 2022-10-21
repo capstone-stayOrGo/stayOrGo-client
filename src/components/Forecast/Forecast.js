@@ -1,5 +1,4 @@
 import React from 'react'
-import { Accordion, AccordionItem, AccordionItemButton, AccordionItemHeading, AccordionItemPanel } from "react-accessible-accordion"
 import calendar from '../../assets/calendar.png'
 import './Forecast.css'
 
@@ -30,29 +29,3 @@ const Forecast = ({ data }) => {
 }
 
 export default Forecast
-
-
-
-{/* <Accordion allowZeroExpanded> */}
-        {/* <AccordionItem key={idx}>
-            <AccordionItemHeading>
-                <AccordionItemButton className='accordion-button'> */}
-                {/* </AccordionItemButton>
-            </AccordionItemHeading>
-        </AccordionItem> */}
-{/* </Accordion> */}
-
-{/* <AccordionItemPanel>
-    <div className="daily-details-grid">
-        <div className='detail-column'>
-            <p>Pressure:  {item.main.pressure} in</p>
-            <p>Humidity:  {item.main.humidity}%</p>
-            <p>Clouds:  {item.clouds.all}</p>
-        </div>
-        <div className='detail-column'>
-            <p>Wind Speed:  {Math.round(item.wind.speed)} mph</p>
-            <p>Sea Level:  {item.main.sea_level} ft</p>
-            <p>Feels like:  {Math.round(item.main.feels_like)}°F</p>
-        </div>
-    </div>
-</AccordionItemPanel> */}
