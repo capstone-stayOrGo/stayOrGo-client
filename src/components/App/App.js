@@ -1,6 +1,5 @@
 // Dependencies
 import React, { useState, useEffect } from "react"
-
 // Components
 import Footer from '../Footer/Footer';
 import Map from '../Map/Map';
@@ -24,32 +23,38 @@ function App() {
     const response = await fetch("https://dc6e72c4-8622-4280-9089-79102851df02.mock.pstmn.io/api/v1/disasters?lat=33.2896&long=-97.6982");
     return await response.json();
   }
-  
+  // const [lat, lng] = location.split(" ")
+  // const fetchCurrentWeather = async (location) => {
+  //   // const [lat, lng] = location
+  //   const currentWeatherFetch = fetch(`${WEATHER_API_URL}/weather?lat=${lat}&lon=${lng}&appid=${WEATHER_API_KEY}&units=imperial`);
+  //   const forecastFetch = fetch(`${WEATHER_API_URL}/forecast?lat=${lat}&lon=${lng}&appid=${WEATHER_API_KEY}&units=imperial`);
+    
+  //   Promise.all([ currentWeatherFetch, forecastFetch ])
+  //       .then(async (response) => {
+  //         const weatherResponse = await response[0].json();
+  //         const forecastResponse = await response[1].json();
+  //         console.log('weatherResponse: ', weatherResponse)
+  //         // setCurrentWeather({city: location, ...weatherResponse})
+  //         // setForecast({city: location, ...forecastResponse})
+  //       })
+  //       .catch((err) => console.log(err))
+  // // const disasterFetch = fetch(`${DISASTER_API_URL}`)
+  //     }
+
   useEffect( () => {
     navigator.geolocation.getCurrentPosition( (geoposition) => {
       const {latitude, longitude} = geoposition.coords
       setLocation({lat: latitude, lng: longitude})
     })
-      fetchDisasterData()
-      .then((data) => setDisasterAlerts(data.data))
+    fetchDisasterData()
+    // fetchCurrentWeather()
+    .then((data) => setDisasterAlerts(data.data))
   }, [])
-
-  // `${DISASTER_API_URL}/disasters?lat=34.382692&long=-94.805750`
-  // https://stay-or-go-server.herokuapp.com/api/v1/disasters?lat=34.382692&long=-94.805750
-  // const findDisaster = () => {
-  //   return fetch(`${DISASTER_API_URL}`)
-  //   .then(response => response.json())
-
-  //   // Promise.all([disasterFetch])
-  //   //   .then(response => response.json())
-  //   //   .then(data => {
-  //   //     setDisasterAlerts(data)
-  //   //   })
-
-  // }
+  
+ 
   console.log('location: ', location) //location: {lat: 32.9956027, lng: -97.3765712}
-  console.log("currentWeather: ", currentWeather)
-  console.log("forecast: ", forecast)
+  // console.log("currentWeather: ", currentWeather)
+  // console.log("forecast: ", forecast)
   console.log("disasterAlerts: ", disasterAlerts)
 
   // useEffect( () => {
@@ -67,7 +72,7 @@ function App() {
           <SMSNotification />
           <WeatherAlert disasterAlert={disasterAlerts}/>
           {/* <Search onSearchChange={handleOnSearchChange}/> */}
-          {currentWeather && location ? <Weather data={currentWeather} location={location} /> : <h2>Loading...</h2>}
+          {/* {currentWeather && location ? <Weather data={currentWeather} location={location} /> : <h2>Loading...</h2>} */}
         </div>
         <div className="map-alert">
           {location ? <Map location={location} /> : <h2>Loading...</h2>}
