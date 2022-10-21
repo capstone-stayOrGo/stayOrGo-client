@@ -1,6 +1,6 @@
 // Dependencies
 import React, { useState, useEffect } from "react"
-// import { GenIcon } from "react-icons";
+
 // Components
 import Footer from '../Footer/Footer';
 import Map from '../Map/Map';
@@ -20,6 +20,11 @@ function App() {
   const [forecast, setForecast] = useState("")
   const [disasterAlerts, setDisasterAlerts] = useState("")
 
+  const fetchDisasterData = async () => {
+    const response = await fetch("https://dc6e72c4-8622-4280-9089-79102851df02.mock.pstmn.io/api/v1/disasters?lat=33.2896&long=-97.6982");
+    return await response.json();
+  }
+  
   useEffect( () => {
     navigator.geolocation.getCurrentPosition( (geoposition) => {
       const {latitude, longitude} = geoposition.coords
@@ -29,11 +34,8 @@ function App() {
       .then((data) => setDisasterAlerts(data.data))
   }, [])
 
-  const fetchDisasterData = async () => {
-    const response = await fetch("https://dc6e72c4-8622-4280-9089-79102851df02.mock.pstmn.io/api/v1/disasters?lat=33.2896&long=-97.6982");
-    return await response.json();
-  }
-  
+  // `${DISASTER_API_URL}/disasters?lat=34.382692&long=-94.805750`
+  // https://stay-or-go-server.herokuapp.com/api/v1/disasters?lat=34.382692&long=-94.805750
   // const findDisaster = () => {
   //   return fetch(`${DISASTER_API_URL}`)
   //   .then(response => response.json())
