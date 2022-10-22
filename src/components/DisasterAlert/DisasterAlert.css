@@ -1,0 +1,19 @@
+.disaster-alert-message {
+    padding: 1em;
+}
+
+.alert-details {
+    text-align: left;
+}
+.alert-type {
+    padding-bottom: .2em;
+}
+
+.severity-headline {
+    padding-top: .3em;
+    padding-bottom: .3em;
+}
+
+.alert-info {
+    line-height: 1.5em;
+}
