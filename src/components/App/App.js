@@ -19,6 +19,11 @@ function App() {
   const [forecast, setForecast] = useState("")
   const [disasterAlerts, setDisasterAlerts] = useState("")
 
+  const addUser = (phoneNumber) => {
+    // Make a fetch POST request to the users endpoint with the phone number provided by the SMS form
+    // Display a success/failure message to the user based on the response from the server
+  }
+
   const formDisasterURLWithCoords = () => {
     // Should we move this functionality into api.js?
     return `${DISASTER_API_URL}?lat=${location.lat}&long=${location.lng}`
@@ -53,7 +58,7 @@ function App() {
       <main>
         <NavBar className='navbar'/>
         <div className="sms-search-weather">
-          <SMSNotification />
+          <SMSNotification addUser={addUser} />
           <WeatherAlert disasterAlert={disasterAlerts}/>
           
         </div>
