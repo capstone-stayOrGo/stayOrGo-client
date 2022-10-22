@@ -9,7 +9,7 @@ import SMSNotification from "../SMSNotification/SMSNotification";
 import Search from "../Search/Search";
 import Weather from "../Weather/Weather";
 import Forecast from "../Forecast/Forecast";
-import { WEATHER_API_KEY, WEATHER_API_URL, DISASTER_API_URL } from '../../api'
+import { WEATHER_API_KEY, WEATHER_API_URL, DISASTER_API_URL, ADD_USER_URL} from '../../api'
 import './App.css';
 
 function App() {
@@ -19,8 +19,34 @@ function App() {
   const [forecast, setForecast] = useState("")
   const [disasterAlerts, setDisasterAlerts] = useState("")
 
+  const formUserData = (phoneNumber) => {
+    return {
+      "lat": String(location.lat),
+      "long": String(location.lng),
+      "phone": String(phoneNumber),
+    }
+    // console output JSON USER DATA {"lat":"40.1420187","long":"-105.1029179","phone":"12358723098"}
+  }
+
   const addUser = (phoneNumber) => {
     // Make a fetch POST request to the users endpoint with the phone number provided by the SMS form
+    const userData = formUserData(phoneNumber)
+    fetch(ADD_USER_URL, { 
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(userData)
+    })
+    .then(response => {
+      console.log({response})
+      return response.json()
+    })
+    .then(
+      data => {
+        console.log("DATA,", data)
+      }
+    )
     // Display a success/failure message to the user based on the response from the server
   }
 

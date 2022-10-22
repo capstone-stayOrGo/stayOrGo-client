@@ -13,4 +13,12 @@ export const WEATHER_API_KEY = "7454d65faa975f224f6bc598ccfe852f"
 export const DISASTER_API_URL = "https://stay-or-go-server.herokuapp.com/api/v1/disasters"
 export const DISASTER_MOCK_URL = "https://dc6e72c4-8622-4280-9089-79102851df02.mock.pstmn.io/api/v1/disasters?lat=33.2896&long=-97.6982"
 
+export const ADD_USER_URL = "https://stay-or-go-server.herokuapp.com/api/v1/users"
+// required format for add user request body
+// {
+//   "lat": "33.2896",
+//   "long": "-97.6982",
+//   "phone": "17204740636"
+// }
+
 // export const DISASTER_API_URL = "https://stay-or-go-server.herokuapp.com/api/v1/disasters?lat=34.382692&long=-94.805750"
