@@ -29,7 +29,7 @@ const WeatherAlert = ({ disasterAlert }) => {
     return (
         <section className='weather-alert'>
             <h1 className='disaster-title'>Disaster Alerts</h1>
-            { formattedAlert.length ? formattedAlert : <h2>No disaster alerts at this time!</h2>}
+            { formattedAlert.length ? formattedAlert : <h2>No disaster alerts for your area at this time!</h2>}
         </section>
     )
 }

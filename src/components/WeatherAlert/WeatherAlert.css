@@ -13,5 +13,6 @@
 .disaster-title {
     font-size: 3em;
     text-decoration: underline;
-    color: rgb(91, 0, 0)
+    color: rgb(91, 0, 0);
+    margin-bottom: 1em;
 }
