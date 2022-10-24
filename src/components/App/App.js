@@ -26,11 +26,9 @@ function App() {
       "long": String(location.lng),
       "phone": String(phoneNumber),
     }
-    // console output JSON USER DATA {"lat":"40.1420187","long":"-105.1029179","phone":"12358723098"}
   }
 
   const addUser = (phoneNumber) => {
-    // Make a fetch POST request to the users endpoint with the phone number provided by the SMS form
     const userData = formUserData(phoneNumber)
     fetch(ADD_USER_URL, { 
       method: "POST",
@@ -40,17 +38,17 @@ function App() {
       body: JSON.stringify(userData)
     })
     .then(response => {
-      // Display a success/failure message to the user based on the response from the server
-      console.log({response})
       return response.json()
     })
     .then(
       data => {
-        console.log({data})
         const {phone, lat, long} = data.data.attributes
-        setSMSFeedback(`Success! You will receive disaster alerts at ${phone} for location at lat:${lat} long:${long}`)
+        setSMSFeedback({ type: "success", message: `Success! You will receive disaster alerts at ${phone} for location at lat:${lat} long:${long}`})
       }
     )
+    .catch( error => {
+      setSMSFeedback({ type: "error", message: `Error. Something went wrong. More info: ${error}`})
+    })
   }
 
   const formDisasterURLWithCoords = () => {

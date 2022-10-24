@@ -2,7 +2,7 @@
     background-color: white;
     border-radius: 16px;
     width: 45vw;
-    height: 20vh;
+    max-height: 20vh;
     padding-top: .5em;
     background-color: #75757A;
     box-shadow: inset 0px 0px 28px 12px #999999;
@@ -55,7 +55,7 @@
 }
 
 .error {
-  color: crimson;
+  color:darkred;
   background-color: rgba(220, 20, 60, .3);
   border-radius: 10px;
   width: 90%;
