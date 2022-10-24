@@ -14,10 +14,16 @@ function App() {
   const [location, setLocation] = useState("")
   const [disasterAlerts, setDisasterAlerts] = useState("")
 
+  // const fetchDisasterData = async () => {
+  //   const response = await fetch("https://dc6e72c4-8622-4280-9089-79102851df02.mock.pstmn.io/api/v1/disasters?lat=33.2896&long=-97.6982");
+  //   return await response.json();
+  // }
+
   const fetchDisasterData = async () => {
-    const response = await fetch("https://dc6e72c4-8622-4280-9089-79102851df02.mock.pstmn.io/api/v1/disasters?lat=33.2896&long=-97.6982");
+    const response = await fetch("https://stay-or-go-server.herokuapp.com/api/v1");
     return await response.json();
   }
+  console.log({location})
 
   useEffect( () => {
     navigator.geolocation.getCurrentPosition( (geoposition) => {
@@ -36,7 +42,7 @@ function App() {
           <SMSNotification />
           <WeatherAlert disasterAlert={disasterAlerts}/>
         </div>
-        <div className="map-alert">
+        <div className="map-container">
           {location ? <Map location={location} /> : <h2>Loading...</h2>}
         </div>
       </main>

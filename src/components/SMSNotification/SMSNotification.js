@@ -13,6 +13,7 @@ const SMSNotification = () => {
                 <PhoneInput
                     country={'us'}
                     value={phoneNumber}
+                    type='text'
                     // onChange={phoneNumber => setPhoneNumber({ phoneNumber })}
                 />
                 <button className='submit-btn'>Submit</button>
