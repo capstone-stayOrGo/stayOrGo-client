@@ -15,6 +15,7 @@ import './App.css';
 function App() {
 
   const [location, setLocation] = useState("")
+  const [smsFeedback, setSMSFeedback] = useState("")
   const [currentWeather, setCurrentWeather] = useState("")
   const [forecast, setForecast] = useState("")
   const [disasterAlerts, setDisasterAlerts] = useState("")
@@ -39,15 +40,17 @@ function App() {
       body: JSON.stringify(userData)
     })
     .then(response => {
+      // Display a success/failure message to the user based on the response from the server
       console.log({response})
       return response.json()
     })
     .then(
       data => {
-        console.log("DATA,", data)
+        console.log({data})
+        const {phone, lat, long} = data.data.attributes
+        setSMSFeedback(`Success! You will receive disaster alerts at ${phone} for location at lat:${lat} long:${long}`)
       }
     )
-    // Display a success/failure message to the user based on the response from the server
   }
 
   const formDisasterURLWithCoords = () => {
@@ -84,9 +87,8 @@ function App() {
       <main>
         <NavBar className='navbar'/>
         <div className="sms-search-weather">
-          <SMSNotification addUser={addUser} />
+          <SMSNotification addUser={addUser} userMessage={smsFeedback} />
           <WeatherAlert disasterAlert={disasterAlerts}/>
-          
         </div>
         <div className="map-alert">
           {location ? <Map location={location} /> : <h2>Loading...</h2>}
