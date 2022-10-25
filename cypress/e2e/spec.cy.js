@@ -18,6 +18,10 @@ describe('App', () => {
   it('should be able to enter phone number to input field', () => {
     cy.get('input[type="tel"]').first().type('8177187210').should('have.value', '+1 (817) 718-7210')
   })
+  it('should let user know if phone number was successfully submitted', () => {
+    cy.get('input[type="tel"]').first().type('8177187210').should('have.value', '+1 (817) 718-7210')
+      .type('userMessage').should('have.value', 'Success! You will receive disaster alerts`')
+  })
   // it('should give an error message if user is submitting without inputing phone number', () => {
   //   cy.get('input[type="tel"]').first().type('')
   //     .get('.submit-btn').click()

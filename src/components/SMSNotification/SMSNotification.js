@@ -17,7 +17,6 @@ const SMSNotification = (props) => {
       <p>
         Enter your phone number below to receive SMS notifications of new alerts
       </p>
-      {/* <div className="phone-input"> */}
         <form className="sms-form" onSubmit={onSMSSubmit}>
           <PhoneInput
             country={"us"}
@@ -28,7 +27,6 @@ const SMSNotification = (props) => {
           
           {<p id="userMessage" className={userMessage.type}>{userMessage.message}</p>}
         </form>
-      {/* </div> */}
     </section>
   );
 };

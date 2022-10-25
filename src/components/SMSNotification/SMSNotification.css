@@ -2,8 +2,8 @@
   background-color: white;
   border-radius: 16px;
   width: 45vw;
-  height: 20vh;
-  padding-top: .5em;
+  height: 24vh;
+  padding-top: 1em;
   background-color: #75757A;
   box-shadow: inset 0px 0px 28px 12px #999999;
   text-shadow: 0px 4px 4px rgba(255, 255, 255, 0.25);
@@ -11,23 +11,44 @@
 
 .sms-form {
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   align-content: center;
-  padding-top: .5em;
+  padding-top: 1em;
   align-items: center;
   margin-right: 10em;
   margin-left: 10em;
 }
 
 .react-tel-input {
-display: flex;
-position: relative;
+  display: inline;
+  padding-left: 1em;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-control {
+  background: #FFFFFF;
+  border: 1px solid #CACACA;
+  border-radius: 5px;
+  padding-left: 1em;
+  height: 35px;
+  /* width: 20em; */
+  outline: none;
+}
+
+.flag-dropdown {
+  width: 3em;
+  height: 2.3em;
+  margin-left: -4em;
+  padding: 0 0 0 0.75em;
+  border-radius: 3px 0 0 3px;
 }
 
 .submit-btn{
   align-items: center;
   background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
-  border: 0;
+  margin-top: 1em;
   border-radius: 6px;
   box-shadow: rgb(45 35 66 / 40%) 0 2px 4px, rgb(45 35 66 / 30%) 0 7px 13px -3px, rgb(58 65 111 / 50%) 0 -3px 0 inset;
   box-sizing: border-box;
@@ -35,6 +56,7 @@ position: relative;
   cursor: pointer;
   display: inline-flex;
   height: 3.5vh;
+  width: 8vw;
   justify-content: center;
   line-height: 1;
   list-style: none;
