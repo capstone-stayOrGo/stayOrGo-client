@@ -7,9 +7,14 @@ const SMSNotification = (props) => {
   const {userMessage} = props;
   const [phoneNumber, setPhoneNumber] = useState();
 
+  const resetInputField = () => {
+    setPhoneNumber('+1')
+  }
+
   const onSMSSubmit = (event) => {
     event.preventDefault();
     props.addUser(phoneNumber)
+    resetInputField()
   };
 
   return (

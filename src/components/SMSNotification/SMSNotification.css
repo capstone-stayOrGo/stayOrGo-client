@@ -7,6 +7,7 @@
   background-color: #75757A;
   box-shadow: inset 0px 0px 28px 12px #999999;
   text-shadow: 0px 4px 4px rgba(255, 255, 255, 0.25);
+  /* overflow-x: scroll; */
 }
 
 .sms-form {
@@ -16,8 +17,7 @@
   align-content: center;
   padding-top: 1em;
   align-items: center;
-  margin-right: 10em;
-  margin-left: 10em;
+  
 }
 
 .react-tel-input {
@@ -40,8 +40,8 @@
 .flag-dropdown {
   width: 3em;
   height: 2.3em;
-  margin-left: -4em;
-  padding: 0 0 0 0.75em;
+  /* margin-left: -4em; */
+  /* padding: 0 0 0 0.75em; */
   border-radius: 3px 0 0 3px;
 }
 
@@ -89,4 +89,6 @@ transform: translateY(2px);
   text-align: center;
   padding-top: 1em;
   text-shadow: 0px 4px 4px rgba(255, 255, 255, 0.25);
+  
+  font-size: smaller;
 }
