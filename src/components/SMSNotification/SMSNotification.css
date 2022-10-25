@@ -2,14 +2,14 @@
   background-color: white;
   border-radius: 16px;
   width: 45vw;
-  height: 10vh;
+  height: 20vh;
   padding-top: .5em;
   background-color: #75757A;
   box-shadow: inset 0px 0px 28px 12px #999999;
   text-shadow: 0px 4px 4px rgba(255, 255, 255, 0.25);
 }
 
-.phone-input {
+.sms-form {
   display: flex;
   justify-content: space-around;
   align-content: center;
@@ -61,4 +61,10 @@ transform: translateY(-2px);
 .submit-btn:active {
 box-shadow: #3c4fe0 0 3px 7px inset;
 transform: translateY(2px);
+}
+
+#userMessage {
+  text-align: center;
+  padding-top: 1em;
+  text-shadow: 0px 4px 4px rgba(255, 255, 255, 0.25);
 }
