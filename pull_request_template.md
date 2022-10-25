@@ -1,4 +1,4 @@
-# GTFO Pull Request
+# Stay or Go Pull Request
 
 - [ ] New feature (adds functionality)
 - [ ] Describe the purpose of this PR(other):
