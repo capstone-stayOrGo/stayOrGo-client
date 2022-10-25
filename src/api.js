@@ -22,3 +22,4 @@ export const ADD_USER_URL = "https://stay-or-go-server.herokuapp.com/api/v1/user
 // }
 
 // export const DISASTER_API_URL = "https://stay-or-go-server.herokuapp.com/api/v1/disasters?lat=34.382692&long=-94.805750"
+

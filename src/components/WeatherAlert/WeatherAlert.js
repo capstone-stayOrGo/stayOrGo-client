@@ -3,12 +3,10 @@ import './WeatherAlert.css'
 import DisasterAlert from '../DisasterAlert/DisasterAlert'
 
 const WeatherAlert = ({ disasterAlert }) => {
-    // conditional if type==="disaster"
     const fullAlert = Object.keys(disasterAlert)
     const alertDetails = fullAlert.map(eachAlert => {
         return disasterAlert[eachAlert].attributes
     })
-console.log({alertDetails})
 
     const formattedAlert = alertDetails.map((eachFormattedAlert, index) => {
         const { areas, description, headline, severity, type, urgency } = eachFormattedAlert
