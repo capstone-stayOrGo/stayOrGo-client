@@ -1,15 +1,9 @@
-// describe('App', () => {
-//   beforeEach(() => {
-//     cy.intercept("GET", 'https://dc6e72c4-8622-4280-9089-79102851df02.mock.pstmn.io/api/v1/disasters?lat=33.2896&long=-97.6982')
-//   })
-
-
 describe('App', () => {
   beforeEach(() => {
-    cy.intercept('GET', 'https://stay-or-go-server.herokuapp.com/api/v1', {fixture: 'disasters'})
-    cy.visit('http://localhost:3002/').wait(1000)
+    cy.intercept({url: 'https://stay-or-go-server.herokuapp.com/api/v1/disasters*'}, {fixture: 'disasters'})
   })
   it('should have a title', () => {
+    cy.visit('http://localhost:3000/').wait(2000)
     cy.contains('Stay or Go')
   })
   it('should have a map displayed on page', () => {
@@ -33,8 +27,8 @@ describe('App', () => {
   })
   it('should let user know if phone number was successfully submitted', () => {
     cy.intercept('POST', 'https://stay-or-go-server.herokuapp.com/api/v1/users', {
-    fixture: "user.json"
-  })
+      fixture: "user.json"
+    })
     cy.get('input[type="tel"]').type('8177187210').should('have.value', '+1 (817) 718-7210')
       .get('.submit-btn').click().wait(2000)
       .get('.sms-form')
