@@ -1,42 +1,36 @@
 .App {
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
+  justify-content: center;
   text-align: center;
   margin: 0;
-  /* height: 90vh; */
-  /* width: 100vw; */
-  /* padding: 1em; */
+  height: 96vh;
 }
 
 main {
   display: flex;
-  /* width: 100%; */
+  /* flex-wrap:wrap; */
   margin: 1.5em;
-  /* padding: 1em; */
   align-content: center;
 }
 
-/* .navbar {
-  padding: 1em;
-} */
+.navbar-container {
+  display: flex;
+  align-items: center;
+}
 
 .sms-search-weather {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: 90%;
+  justify-content: space-around;
+  height:100%;
   margin-left: .5vw;
   margin-right: .5vw;
   padding-right: 1em;
   padding-left: 1em;
 }
 
-.map-alert {
+.map-container {
   display: flex;
-  flex-direction: column;
-  height: 90%;
   align-items: center;
-  /* justify-content: space-between; */
-  margin-right: 2vw;
-  margin-left: -.5vw;
 }

@@ -8,7 +8,7 @@ const WeatherAlert = ({ disasterAlert }) => {
     const alertDetails = fullAlert.map(eachAlert => {
         return disasterAlert[eachAlert].attributes
     })
-    console.log('alertDetails: ', alertDetails)
+console.log({alertDetails})
 
     const formattedAlert = alertDetails.map((eachFormattedAlert, index) => {
         const { areas, description, headline, severity, type, urgency } = eachFormattedAlert
@@ -29,7 +29,7 @@ const WeatherAlert = ({ disasterAlert }) => {
     return (
         <section className='weather-alert'>
             <h1 className='disaster-title'>Disaster Alerts</h1>
-            { formattedAlert.length ? formattedAlert : <h2>No disaster alerts at this time!</h2>}
+            { formattedAlert.length ? formattedAlert : <h2>No disaster alerts for your area at this time!</h2>}
         </section>
     )
 }
