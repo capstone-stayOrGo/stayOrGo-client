@@ -7,7 +7,7 @@ const WeatherAlert = ({ disasterAlert }) => {
     const alertDetails = fullAlert.map(eachAlert => {
         return disasterAlert[eachAlert].attributes
     })
-console.log({alertDetails})
+
     const formattedAlert = alertDetails.map((eachFormattedAlert, index) => {
         const { areas, description, headline, severity, type, urgency } = eachFormattedAlert
         return (

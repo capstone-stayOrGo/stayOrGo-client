@@ -71,6 +71,28 @@
   font-size: 1em;
 }
 
+.success {
+  color: green;
+  background-color: rgba(173, 255, 47, .3);
+  border-radius: 10px;
+  width: 90%;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+
+.error {
+  color:darkred;
+  background-color: rgba(220, 20, 60, .3);
+  border-radius: 10px;
+  width: 90%;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+
 .submit-btn:focus {
 box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
 }
