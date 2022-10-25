@@ -1,7 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 0;
   font-family: 'Rubik', sans-serif;
   font-weight: 400;
+  background-color: #303138;
 }
 
 /* code {
