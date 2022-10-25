@@ -6,18 +6,13 @@ import Map from '../Map/Map';
 import NavBar from "../NavBar/NavBar";
 import WeatherAlert from "../WeatherAlert/WeatherAlert";
 import SMSNotification from "../SMSNotification/SMSNotification";
-import Search from "../Search/Search";
-import Weather from "../Weather/Weather";
-import Forecast from "../Forecast/Forecast";
-import { WEATHER_API_KEY, WEATHER_API_URL, DISASTER_API_URL, ADD_USER_URL} from '../../api'
+import {DISASTER_API_URL, ADD_USER_URL} from '../../api'
 import './App.css';
 
 function App() {
 
   const [location, setLocation] = useState("")
   const [smsFeedback, setSMSFeedback] = useState("")
-  const [currentWeather, setCurrentWeather] = useState("")
-  const [forecast, setForecast] = useState("")
   const [disasterAlerts, setDisasterAlerts] = useState("")
 
   const formUserData = (phoneNumber) => {
@@ -63,7 +58,6 @@ function App() {
     return await response.json();
   }
   
-
   useEffect( () => {
     navigator.geolocation.getCurrentPosition( (geoposition) => {
       const {latitude, longitude} = geoposition.coords
@@ -86,11 +80,10 @@ function App() {
         <NavBar className='navbar'/>
         <div className="sms-search-weather">
           <SMSNotification addUser={addUser} userMessage={smsFeedback} />
-          <WeatherAlert disasterAlert={disasterAlerts}/>
+          <WeatherAlert disasterAlert={disasterAlerts} />
         </div>
-        <div className="map-alert">
+        <div className="map-container">
           {location ? <Map location={location} /> : <h2>Loading...</h2>}
-          {forecast && <Forecast data={forecast} />}
         </div>
       </main>
       <Footer />
@@ -99,7 +92,3 @@ function App() {
 }
 
 export default App;
-
-
-
-

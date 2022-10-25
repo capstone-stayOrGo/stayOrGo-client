@@ -1,46 +1,74 @@
 .sms-notify {
-    background-color: white;
-    border-radius: 16px;
-    width: 45vw;
-    max-height: 20vh;
-    padding-top: .5em;
-    background-color: #75757A;
-    box-shadow: inset 0px 0px 28px 12px #999999;
-    text-shadow: 0px 4px 4px rgba(255, 255, 255, 0.25);
+  background-color: white;
+  border-radius: 16px;
+  width: 45vw;
+  height: 24vh;
+  padding-top: 1em;
+  background-color: #75757A;
+  box-shadow: inset 0px 0px 28px 12px #999999;
+  text-shadow: 0px 4px 4px rgba(255, 255, 255, 0.25);
 }
 
-.phone-input {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    padding-top: .5em;
-    align-items: center;
+.sms-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
+  padding-top: 1em;
+  align-items: center;
+  margin-right: 10em;
+  margin-left: 10em;
+}
+
+.react-tel-input {
+  display: inline;
+  padding-left: 1em;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-control {
+  background: #FFFFFF;
+  border: 1px solid #CACACA;
+  border-radius: 5px;
+  padding-left: 1em;
+  height: 35px;
+  width: 4vw;
+  outline: none;
+}
+
+.flag-dropdown {
+  width: 3em;
+  height: 2.3em;
+  margin-left: -4em;
+  padding: 0 0 0 0.75em;
+  border-radius: 3px 0 0 3px;
 }
 
 .submit-btn{
-    align-items: center;
-    background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
-    border: 0;
-    border-radius: 6px;
-    box-shadow: rgb(45 35 66 / 40%) 0 2px 4px, rgb(45 35 66 / 30%) 0 7px 13px -3px, rgb(58 65 111 / 50%) 0 -3px 0 inset;
-    box-sizing: border-box;
-    color: #fff;
-    cursor: pointer;
-    display: inline-flex;
-    height: 3.5vh;
-    justify-content: center;
-    line-height: 1;
-    list-style: none;
-    overflow: hidden;
-    padding-left: 0.7em;
-    padding-right: 0.7em;
-    margin-bottom: 10px;
-    position: relative;
-    transition: box-shadow .15s,transform .15s;
-    touch-action: manipulation;
-    white-space: nowrap;
-    will-change: box-shadow,transform;
-    font-size: 1em;
+  align-items: center;
+  background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+  margin-top: 1em;
+  border-radius: 6px;
+  box-shadow: rgb(45 35 66 / 40%) 0 2px 4px, rgb(45 35 66 / 30%) 0 7px 13px -3px, rgb(58 65 111 / 50%) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  height: 3.5vh;
+  width: 8vw;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 0.7em;
+  padding-right: 0.7em;
+  position: relative;
+  transition: box-shadow .15s,transform .15s;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 1em;
 }
 
 .success {
@@ -66,15 +94,21 @@
 }
 
 .submit-btn:focus {
-  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
 }
 
 .submit-btn:hover {
-  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
-  transform: translateY(-2px);
+box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+transform: translateY(-2px);
 }
 
 .submit-btn:active {
-  box-shadow: #3c4fe0 0 3px 7px inset;
-  transform: translateY(2px);
+box-shadow: #3c4fe0 0 3px 7px inset;
+transform: translateY(2px);
+}
+
+#userMessage {
+  text-align: center;
+  padding-top: 1em;
+  text-shadow: 0px 4px 4px rgba(255, 255, 255, 0.25);
 }

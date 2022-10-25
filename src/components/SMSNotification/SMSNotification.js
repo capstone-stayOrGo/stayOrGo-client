@@ -17,18 +17,17 @@ const SMSNotification = (props) => {
       <p>
         Enter your phone number below to receive SMS notifications of new alerts
       </p>
-      <div className="phone-input">
         <form className="sms-form" onSubmit={onSMSSubmit}>
           <PhoneInput
+            type='tel'
+            className='phone-input'
             country={"us"}
             value={phoneNumber}
             onChange={phoneNumber => setPhoneNumber(phoneNumber)}
           />
           <button className="submit-btn"> Submit </button>
-          
-          {<p className={userMessage.type}>{userMessage.message}</p>}
+          {<h2 id="userMessage" className={userMessage.type}>{userMessage.message}</h2>}
         </form>
-      </div>
     </section>
   );
 };

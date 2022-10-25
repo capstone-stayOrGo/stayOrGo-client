@@ -1,0 +1,75 @@
+{"data": [
+  {"id": "2", 
+  "type": "disaster",
+  "attributes": {
+      "areas": ["Grand", "Garfield", "hello", "Denver"],
+      "coordinates": [
+                  [
+                      [
+                          -81.780000000000001,
+                          27.91
+                      ],
+                      [
+                          -81.760000000000005,
+                          27.620000000000001
+                      ],
+                      [
+                          -81.840000000000003,
+                          27.620000000000001
+                      ],
+                      [
+                          -81.859999999999999,
+                          27.91
+                      ],
+                      [
+                          -81.780000000000001,
+                          27.91
+                      ]
+                  ]
+              ],
+      "type": "Red Flag Warning", 
+      "certainty": "Observed",
+      "severity": "Extreme",
+      "urgency": "Immediate",
+      "headline": "Your house will burn down in 2.5 seconds if a spark happens to ignite something",
+      "description": "Run for your life, your house is about to explode and melt simoultaneously. No need to save your cats, they don't have souls anyways."
+      }
+  },
+  {"id": "5", 
+  "type": "disaster",
+  "attributes": {
+      "areas": ["Black", "Red", "Pumpikin Spice", "Is Nice"],
+      "coordinates": [
+                  [
+                      [
+                          -81.780000000000001,
+                          27.91
+                      ],
+                      [
+                          -81.760000000000005,
+                          27.620000000000001
+                      ],
+                      [
+                          -81.840000000000003,
+                          27.620000000000001
+                      ],
+                      [
+                          -81.859999999999999,
+                          27.91
+                      ],
+                      [
+                          -81.780000000000001,
+                          27.91
+                      ]
+                  ]
+              ],
+      "type": "Tornado", 
+      "certainty": "Likely",
+      "severity": "Severe",
+      "urgency": "Expected",
+      "headline": "A big ol tornado is a headin yur way",
+      "description": "Get in ur pickup and haul ass outta ther"
+      }
+  }
+]
+}
