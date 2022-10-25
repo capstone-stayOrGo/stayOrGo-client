@@ -19,13 +19,15 @@ const SMSNotification = (props) => {
       </p>
         <form className="sms-form" onSubmit={onSMSSubmit}>
           <PhoneInput
+            type='tel'
+            className='phone-input'
             country={"us"}
             value={phoneNumber}
             onChange={phoneNumber => setPhoneNumber(phoneNumber)}
           />
           <button className="submit-btn"> Submit </button>
           
-          {<p id="userMessage" className={userMessage.type}>{userMessage.message}</p>}
+          {<h2 id="userMessage" className={userMessage.type}>{userMessage.message}</h2>}
         </form>
     </section>
   );
