@@ -18,17 +18,17 @@ Stay Or Go 🚩
 ## Introduction
 - Welcome to Stay or Go, a disaster alert app built with React.js to be a Progressive Web App (PWA). This application is meant to take in natural disaster-related data from the API created by the back end team, and give the user an easily accessible and easily understood presentation of information in situations that may already be filled with fear and/or uncertainty. Upon opening the app, the google map will be loaded to user's location, and any disaster alerts for that location will be displayed on the page. The user can also enter their phone number to recieve push notifications of disaster-related alerts in that area. 
 
-[View a Demo Site](https://stayorgo-demo.vercel.app/)
-
 ## Learning Goals
 Use the technology we have been working with over the course of the module to demonstrate mastery of the following:
 - React
 - PWA
 - Asynchronous JavaScript
 - End to end testing with Cypress
+- Google Maps API
+- Geolocation
 
 ## Technologies and Tools
-
+<div align="center">
 <table>
 <tr>
 <td>
@@ -37,36 +37,57 @@ Use the technology we have been working with over the course of the module to de
 - ![HTML](https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white)
 - ![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 - ![NPM](https://img.shields.io/badge/NPM-%F0%9F%91%BE-orange)
+
+  
+</td>
+
+<td>
+
 - ![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
 - ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 - ![cypress](https://img.shields.io/badge/-cypress-%23E5E5E5?style=for-the-badge&logo=cypress&logoColor=058a5e)
 - ![RESTful API](https://img.shields.io/badge/RESTful%20API-%E2%8E%94-brightgreen)
-  
+
 </td>
+
 <td>
 
 - ![GitHub Projects](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
 - ![GitHub Issues](https://img.shields.io/badge/GitHub%20Projects-%F0%9F%92%BB-lightgrey)
 - ![JSON](https://img.shields.io/badge/json-5E5C5C?style=for-the-badge&logo=json&logoColor=white)
 - ![Vercel](https://user-images.githubusercontent.com/101746747/188785090-4abee495-4f46-4dba-b554-e16ded576297.png)
+
+
+</td>
+
+<td>
+
 - ![CircleCI](https://img.shields.io/badge/circle%20ci-%23161616.svg?style=for-the-badge&logo=circleci&logoColor=white)
 - ![Adobe Illustrator](https://img.shields.io/badge/adobe%20illustrator-%23FF9A00.svg?style=for-the-badge&logo=adobe%20illustrator&logoColor=white)
 - ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
 - ![Heroku](https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white)
 
 </td>
+
 </tr>
 </table>
-
+</div>
 
 ## Illustrations and Demo
 #### View when page loads
+<img width="1641" alt="Screen Shot 2022-10-25 at 9 31 16 PM" src="https://user-images.githubusercontent.com/102887963/197920620-48c86eec-ed2f-4045-b178-fce01f9ab7bf.png">
 
 ----
+
 #### Telephone input for notifications
 
+![SOG](https://user-images.githubusercontent.com/102887963/197922813-e9e54afc-e3b1-4217-8250-ba5d432f768e.gif)
+
 ----
+
 #### Disaster Alerts
+
+<img width="1644" alt="Screen Shot 2022-10-25 at 9 27 40 PM" src="https://user-images.githubusercontent.com/102887963/197920889-304ad235-1cc1-4795-b1ad-fb06334ad23f.png">
 
 ----
 
@@ -89,9 +110,8 @@ Future features could include:
 - User would have access to evacuation plan and/or best route for evacuation
 
 ## Deployed Page
-Visit the published site [here](https://stayorgo-staging.vercel.app/)
-
-<img width="440" alt="Screen Shot 2022-09-26 at 1 55 59 PM" src="https://user-images.githubusercontent.com/102887963/192357777-8e23d2a8-5dd3-4380-859e-186e21b9a4a0.png">
+- Visit the published site [here](https://stayorgo-client.vercel.app/)
+- View a demo site [here](https://stayorgo-demo.vercel.app/)
 
 ## Set Up
 1. Fork this repo
