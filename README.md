@@ -153,4 +153,4 @@ Dara Rockwell
  - [Medium](https://medium.com/)
 
 ## Project Specs
- - The project spec & rubric can be found [here](link to spec sheet goes here)
+ - The project spec & rubric can be found [here](https://mod4.turing.edu/projects/capstone/)
