@@ -19,7 +19,7 @@ const SMSNotification = (props) => {
 
   return (
     <section className="sms-notify">
-      <p>
+      <p className="notification-greeting">
         Enter your phone number below to receive SMS notifications of new alerts
       </p>
         <form className="sms-form" onSubmit={onSMSSubmit}>

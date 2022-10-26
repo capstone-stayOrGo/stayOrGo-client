@@ -1,54 +1,31 @@
 .sms-notify {
+  display: flex;
   background-color: white;
   border-radius: 16px;
   width: 45vw;
-  height: 24vh;
-  padding-top: 1em;
+  height: 20vh;
+  max-height: 40vh;
+  overflow: scroll;
+  padding: 0.5em;
   background-color: #75757A;
   box-shadow: inset 0px 0px 28px 12px #999999;
-  text-shadow: 0px 4px 4px rgba(255, 255, 255, 0.25);
-  /* overflow-x: scroll; */
-}
-
-.sms-form {
-  display: flex;
+  text-shadow: 0px 4px 4px rgb(255 255 255 / 25%);
   flex-direction: column;
-  justify-content: space-around;
-  align-content: center;
-  padding-top: 1em;
-  align-items: center;
-  
-}
-
-.react-tel-input {
-  display: inline;
-  padding-left: 1em;
-  justify-content: center;
   align-items: center;
 }
 
-.form-control {
-  background: #FFFFFF;
-  border: 1px solid #CACACA;
-  border-radius: 5px;
-  padding-left: 1em;
-  height: 35px;
-  width: 4vw;
-  outline: none;
+.phone-input {
+  display: flex;
 }
 
-.flag-dropdown {
-  width: 3em;
-  height: 2.3em;
-  /* margin-left: -4em; */
-  /* padding: 0 0 0 0.75em; */
-  border-radius: 3px 0 0 3px;
+.notification-greeting {
+  padding: 1em;
 }
 
 .submit-btn{
   align-items: center;
   background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
-  margin-top: 1em;
+  border: 0;
   border-radius: 6px;
   box-shadow: rgb(45 35 66 / 40%) 0 2px 4px, rgb(45 35 66 / 30%) 0 7px 13px -3px, rgb(58 65 111 / 50%) 0 -3px 0 inset;
   box-sizing: border-box;
@@ -56,13 +33,14 @@
   cursor: pointer;
   display: inline-flex;
   height: 3.5vh;
-  width: 8vw;
   justify-content: center;
   line-height: 1;
   list-style: none;
   overflow: hidden;
   padding-left: 0.7em;
   padding-right: 0.7em;
+  margin-top: 1vh;
+  margin-bottom: 10px;
   position: relative;
   transition: box-shadow .15s,transform .15s;
   touch-action: manipulation;
@@ -72,25 +50,25 @@
 }
 
 .success {
-  color: green;
-  background-color: rgba(173, 255, 47, .3);
-  border-radius: 10px;
-  width: 90%;
-  padding: 10px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 10px;
+color: green;
+background-color: rgba(173, 255, 47, .3);
+border-radius: 10px;
+width: 90%;
+padding: 10px;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 10px;
 }
 
 .error {
-  color:darkred;
-  background-color: rgba(220, 20, 60, .3);
-  border-radius: 10px;
-  width: 90%;
-  padding: 10px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 10px;
+color:darkred;
+background-color: rgba(220, 20, 60, .3);
+border-radius: 10px;
+width: 90%;
+padding: 10px;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 10px;
 }
 
 .submit-btn:focus {
@@ -111,6 +89,5 @@ transform: translateY(2px);
   text-align: center;
   padding-top: 1em;
   text-shadow: 0px 4px 4px rgba(255, 255, 255, 0.25);
-  
   font-size: smaller;
 }
