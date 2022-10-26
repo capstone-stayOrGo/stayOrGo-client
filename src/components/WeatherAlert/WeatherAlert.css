@@ -1,7 +1,7 @@
 .weather-alert {
     height: 49vh;
     width: 45vw;
-    padding-top: 1em;
+    padding: 0.5em;
     border-radius: 16px;
     background-color: #75757A;
     box-shadow: inset 0px 0px 28px 12px #999999;

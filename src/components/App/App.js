@@ -47,12 +47,10 @@ function App() {
   }
 
   const formDisasterURLWithCoords = () => {
-    // Should we move this functionality into api.js?
     return `${DISASTER_API_URL}?lat=${location.lat}&long=${location.lng}`
   }
 
   const fetchDisasterData = async () => {
-    // Should we move this functionality into api.js?
     const urlForDisastersNearMe = formDisasterURLWithCoords()
     const response = await fetch(urlForDisastersNearMe);
     return await response.json();

@@ -34,15 +34,12 @@ describe('App', () => {
       .find('h2').should('have.class', 'error').contains('Error')
     })
     it('should be able to enter phone number to input field', () => {
-      cy.get('input[type="tel"]').type('8177187210').should('have.value', '+1 (817) 718-7210')
+      cy.get('input[type="tel"]').type('7138906116').should('have.value', '+1 (713) 890-6116')
     })
     it('should let user know if phone number was successfully submitted', () => {
-    cy.get('input[type="tel"]').type('8177187210').should('have.value', '+1 (817) 718-7210')
+    cy.get('input[type="tel"]').type('7138906116').should('have.value', '+1 (713) 890-6116')
       .get('.submit-btn').click().wait(2000)
       .get('.sms-form')
       .find('h2').contains('Success!')
   })
-  // it('should display a message if there are no current disasters', () => {
-  //   cy.get('.weather-alert').should('contain.text', "No disaster alerts for your area at this time!")
-  // })
 })
