@@ -42,7 +42,4 @@ describe('App', () => {
       .get('.sms-form')
       .find('h2').contains('Success!')
   })
-  // it('should display a message if there are no current disasters', () => {
-  //   cy.get('.weather-alert').should('contain.text', "No disaster alerts for your area at this time!")
-  // })
 })
