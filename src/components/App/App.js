@@ -60,7 +60,7 @@ function App() {
   
   useEffect( () => {
     navigator.geolocation.getCurrentPosition( (geoposition) => {
-      const {latitude, longitude} = geoposition.coords
+      const {latitude, longitude} = {"longitude": -81.382778, "latitude": 29.008056 }//geoposition.coords
       setLocation({lat: latitude, lng: longitude})
     })
   }, [])
