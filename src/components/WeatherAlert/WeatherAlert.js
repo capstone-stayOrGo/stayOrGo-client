@@ -10,9 +10,7 @@ const WeatherAlert = ({ disasterAlert }) => {
 
     const formattedAlert = alertDetails.map((eachFormattedAlert, index) => {
         const { areas, description, headline, severity, type, urgency } = eachFormattedAlert
-       
         return (
-        
         <DisasterAlert 
             key={index}
             areas={areas}

@@ -2,12 +2,8 @@ describe('App', () => {
   beforeEach(() => {
     cy.intercept({url: 'https://stay-or-go-server.herokuapp.com/api/v1/disasters*'}, {fixture: 'disasters'})
   })
-
-  // beforeEach(() => {
-  //   cy.intercept('GET', 'https://stay-or-go-server.herokuapp.com/api/v1', {fixture: 'disasters'})
-  // })
   it('should have a title', () => {
-    cy.visit('http://localhost:3002/').wait(1000)
+    cy.visit('http://localhost:3000/').wait(2000)
     cy.contains('Stay or Go')
   })
   it('should have a map displayed on page', () => {
@@ -31,19 +27,16 @@ describe('App', () => {
       .get('.severity-headline').last().should('have.class', 'severity-headline').contains('A big ol tornado is a headin yur way')
       .get('.alert-info').last().should('have.class', 'alert-info').contains('Get in ur pickup and haul ass outta ther')
   })
-  it('should be able to enter phone number to input field', () => {
-    cy.get('input[type="tel"]').type('8177187210').should('have.value', '+1 (817) 718-7210')
-  })
-  it('should let user know if phone number was successfully submitted', () => {
-  //   cy.intercept('POST', 'https://stay-or-go-server.herokuapp.com/api/v1/users', {
-  //   fixture: "user.json"
-  // })
-  it('should give an error message if user is submitting without inputing complete phone number', () => {
-    cy.get('input[type="tel"]').type('123456')
+    it('should give an error message if user is submitting without inputing complete phone number', () => {
+      cy.get('input[type="tel"]').type('123456')
       .get('.submit-btn').click()
       .get('.sms-form')
       .find('h2').should('have.class', 'error').contains('Error')
-  })
+    })
+    it('should be able to enter phone number to input field', () => {
+      cy.get('input[type="tel"]').type('8177187210').should('have.value', '+1 (817) 718-7210')
+    })
+    it('should let user know if phone number was successfully submitted', () => {
     cy.get('input[type="tel"]').type('8177187210').should('have.value', '+1 (817) 718-7210')
       .get('.submit-btn').click().wait(2000)
       .get('.sms-form')
