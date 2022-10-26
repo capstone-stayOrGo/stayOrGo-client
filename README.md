@@ -1,8 +1,6 @@
-<h1 align="center">
-Stay Or Go 🚩
-</h1>
+![Stay or Go](https://user-images.githubusercontent.com/102887963/197936481-6973948d-ed42-41b1-ad06-736697b4ff83.png)
 
-## 🔥 🌪 🌦 Table of Contents 🌨 🌀 🔥
+## Table of Contents
 - [Introduction](#introduction)
 - [Learning Goals](#learning-goals)
 - [Technologies and Tools](#technologies-and-tools)
@@ -95,12 +93,11 @@ Use the technology we have been working with over the course of the module to de
 #### Wins
 - Displayed real disaster data from the National Weather Service API
 - App is installable on mobile and desktop devices
-- 
+- Able to send push notifications to users via SMS of an alert in their area
+- This project was a collaborative effort between a front-end and back-end team, which was great to see the full cycle of the development
 
 #### Challenges
-- 
-- 
-- 
+- Difficult to test live app without first finding live and current natural disaster
 
 ## Roadmap
 Future features could include:
