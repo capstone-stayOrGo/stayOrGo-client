@@ -18,6 +18,8 @@ Stay Or Go 🚩
 ## Introduction
 - Welcome to Stay or Go, a disaster alert app built with React.js to be a Progressive Web App (PWA). This application is meant to take in natural disaster-related data from the API created by the back end team, and give the user an easily accessible and easily understood presentation of information in situations that may already be filled with fear and/or uncertainty. Upon opening the app, the google map will be loaded to user's location, and any disaster alerts for that location will be displayed on the page. The user can also enter their phone number to recieve push notifications of disaster-related alerts in that area. 
 
+[View a Demo Site](https://stayorgo-demo.vercel.app/)
+
 ## Learning Goals
 Use the technology we have been working with over the course of the module to demonstrate mastery of the following:
 - React
@@ -70,8 +72,8 @@ Use the technology we have been working with over the course of the module to de
 
 ## Project Reflections
 #### Wins
-- 
-- 
+- Displayed real disaster data from the National Weather Service API
+- App is installable on mobile and desktop devices
 - 
 
 #### Challenges
