@@ -106,6 +106,7 @@ Future features could include:
 - User would be able to save previous searches
 - User would have access to evacuation plan and/or best route for evacuation
 - When the NWS API returns polygon information for a disaster area, display that polygon on the google map embed
+- User could sign up for disaster alerts multiple times for different locations
 
 ## Deployed Page
 - Visit the published site [here](https://stayorgo-client.vercel.app/)
