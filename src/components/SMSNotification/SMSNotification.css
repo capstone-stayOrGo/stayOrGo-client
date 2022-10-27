@@ -49,9 +49,7 @@
   font-size: 1em;
 }
 
-.success {
-color: green;
-background-color: rgba(173, 255, 47, .3);
+.error, .success {
 border-radius: 10px;
 width: 90%;
 padding: 10px;
@@ -60,15 +58,14 @@ margin-right: auto;
 margin-bottom: 10px;
 }
 
+.success {
+color: green;
+background-color: rgba(173, 255, 47, .3);
+}
+
 .error {
 color:darkred;
 background-color: rgba(220, 20, 60, .3);
-border-radius: 10px;
-width: 90%;
-padding: 10px;
-margin-left: auto;
-margin-right: auto;
-margin-bottom: 10px;
 }
 
 .submit-btn:focus {
